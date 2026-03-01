@@ -1,6 +1,8 @@
+# Instantiation: base chart from expectedbehaviors/gotify; override in values.yaml (gotify.*, onepassworditem.*).
+# Run: helm repo add gotify https://expectedbehaviors.github.io/gotify && helm repo update
 apiVersion: v2
 name: gotify
-description: Gotify — self-hosted push notification server (REST API, WebSocket). bjw-s app-template; OIDC via nginx.
+description: Gotify — self-hosted push notification server (REST API, WebSocket). Base: expectedbehaviors/gotify; OIDC via nginx.
 version: 0.1.0
 appVersion: "2.4.4"
 kubeVersion: ">=1.22.0-0"
@@ -8,14 +10,12 @@ keywords:
   - gotify
   - notifications
   - push
-  - bjw-s
-  - app-template
 home: https://gotify.net
 sources:
   - https://github.com/gotify/server
+  - https://github.com/expectedbehaviors/gotify
 maintainers: []
 dependencies:
-  - name: app-template
-    version: "4.6.2"
-    repository: https://bjw-s-labs.github.io/helm-charts
-    alias: gotify
+  - name: gotify
+    version: "0.1.0"
+    repository: https://expectedbehaviors.github.io/gotify
