@@ -3,7 +3,7 @@
 apiVersion: v2
 name: gotify
 description: "Gotify — self-hosted push notification server (REST API, WebSocket). Base: expectedbehaviors/gotify; OIDC via nginx."
-version: 0.1.0
+version: 0.2.0
 appVersion: "2.4.4"
 kubeVersion: ">=1.22.0-0"
 keywords:
