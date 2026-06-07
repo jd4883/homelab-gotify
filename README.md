@@ -1,7 +1,6 @@
 # Gotify (homelab)
 
-Gotify — self-hosted push notification server with REST API and WebSocket. Uses **bjw-s app-template**. **Managed by Argo CD.** Auth via **OIDC at ingress** (nginx + oauth2-proxy) so the app is not publicly open.
-
+Values-only instantiation for Argo CD. Chart: expectedbehaviors/gotify. This repo supplies values.yaml only.
 ---
 
 ## Chart contents
