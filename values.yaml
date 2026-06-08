@@ -1,5 +1,9 @@
 # Gotify — Argo CD uses expectedbehaviors/gotify chart; this file is values-only (no wrapper).
 # Base chart provides: probes, resources, TZ (UTC), service. Override only ingress and persistence (Longhorn pre-created PVC).
+# No 1Password items synced — app admin password managed in Gotify UI.
+onepassworditem:
+  enabled: false
+
 gotify:
   ingress:
     main:
