@@ -1,11 +1,8 @@
 # Gotify — Argo CD uses expectedbehaviors/gotify chart; this file is values-only (no wrapper).
 # Base chart provides: probes, resources, TZ (UTC), service. Override only ingress and persistence (Longhorn pre-created PVC).
 gotify:
-  global:
-    fullnameOverride: gotify
   ingress:
     main:
-      enabled: true
       annotations:
         external-dns.alpha.kubernetes.io/target: expectedbehaviors.com
       hosts:
