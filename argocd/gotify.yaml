@@ -1,0 +1,12 @@
+chart: gotify
+project: gotify
+namespaceLabels:
+  pod-security.kubernetes.io/audit: privileged
+  pod-security.kubernetes.io/enforce: privileged
+  pod-security.kubernetes.io/warn: privileged
+helmRepoURL: https://expectedbehaviors.github.io/gotify
+helmChartRevision: "1.0.1"
+targetRevision: HEAD
+valuesRef: values
+helmValueFiles:
+  - $values/values.yaml
