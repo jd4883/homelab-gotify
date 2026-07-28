@@ -3,6 +3,12 @@
 Values-only instantiation for Argo CD. Chart: expectedbehaviors/gotify. This repo supplies values.yaml only.
 ---
 
+## 🗺️ Topology
+
+![gotify topology](docs/img/topology.svg)
+
+<sub>Generated from this repo’s `values.yaml`, `Chart.yaml` and `argocd/` manifests. Source: [`docs/img/topology.mmd`](docs/img/topology.mmd). Deployed by Argo CD into namespace `gotify`.</sub>
+
 ## Chart contents
 
 - **App:** Gotify (gotify/server) via bjw-s app-template; port 80.
