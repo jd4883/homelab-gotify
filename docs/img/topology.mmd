@@ -10,12 +10,15 @@ flowchart LR
   end
   subgraph NS["namespace: gotify"]
     direction TB
-    APP["gotify<br/>chart 1.0.1"]:::app
-    PVC[("existing PVCs<br/>gotify-data")]:::store
+    APP["gotify"]:::app
+  end
+  subgraph VOLS["persistent volumes"]
+    direction LR
+    V0[("gotify-data")]:::store
   end
   CHART["Helm chart<br/>expectedbehaviors/gotify"]:::dep
   CHART -. "chart source" .-> APP
   HOSTS --> APP
-  APP --> PVC
+  APP --> VOLS
   TLS["TLS<br/>expectedbehaviors.com-tls"]:::sec
   TLS -. "cert" .-> HOSTS
