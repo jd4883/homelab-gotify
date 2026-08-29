@@ -21,7 +21,12 @@ gotify:
   persistence:
     data:
       enabled: true
+      # app-template's schema treats existingClaim and the size/storageClass/accessMode
+      # trio as mutually exclusive, so the chart defaults must be cleared here.
       existingClaim: gotify-data
+      accessMode: null
+      size: null
+      storageClass: null
       globalMounts:
         - path: /app/data
           readOnly: false
